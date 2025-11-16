@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-nav">
+            <h1><i class="fas fa-book"></i> Online Book Store</h1>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#"><i class="fas fa-th-large"></i> Categories <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#" class="nav-category" data-category="All">All</a></li>
+                            <li><a href="#" class="nav-category" data-category="Fiction">Fiction</a></li>
+                            <li><a href="#" class="nav-category" data-category="History">History</a></li>
+                            <li><a href="#" class="nav-category" data-category="Science">Science</aD</li>
+                        </ul>
+                    </li>
+                    <li><a href="#" id="nav-cart"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by title or author">
+        <button id="searchBtn"><i class="fas fa-search"></i> Search</button>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section id="categories">
+            <h2><i class="fas fa-th-list"></i> Book Categories</h2>
+            <div class="book-list">
+                <!-- Fiction Books -->
+                <div class="book" data-category="Fiction">
+                    <p class="title">The Great Gatsby</p>
+                    <p class="author">F. Scott Fitzgerald</p>
+                    <p class="price">$15</p>
+                    <button class="add-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+                <div class="book" data-category="Fiction">
+                    <p class="title">To Kill a Mockingbird</p>
+                    <p class="author">Harper Lee</p>
+                    <p class="price">$12</p>
+                    <button class="add-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+                <!-- History Books -->
+                <div class="book" data-category="History">
+                    <p class="title">Sapiens</p>
+                    <p class="author">Yuval Noah Harari</p>
+                    <p class="price">$20</p>
+                    <button class="add-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+                <!-- Science Books -->
+                <div class="book" data-category="Science">
+                    <p class="title">A Brief History of Time</p>
+                    <p class="author">Stephen Hawking</p>
+                    <p class="price">$18</p>
+                    <button class="add-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Not Available Message -->
+        <p id="notAvailable" class="not-available" style="display:none;">Book Not Available</p>
+
+        <!-- Mini Cart Summary (Main Page) -->
+        <section id="miniCart">
+            <h3><i class="fas fa-shopping-cart"></i> Cart Summary</h3>
+            <ul id="miniCartItems"></ul>
+            <p>Total Items: <span id="miniTotalItems">0</span> | Total: $<span id="miniTotalPrice">0</span></p>
+        </section>
+
+        <!-- Full Cart Section -->
+        <section id="cart" style="display:none;">
+            <h2><i class="fas fa-shopping-cart"></i> Shopping Cart</h2>
+            <ul id="cartItems"></ul>
+            <p>Total: $<span id="totalPrice">0</span></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Online Book Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
